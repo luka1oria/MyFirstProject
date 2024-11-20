@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.backgroundVideo video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  position: relative;
+}
+
+.nav ul {
+  margin-left: 160px;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 50px;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav p {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10vh;
+  padding: 0;
+}
+.nav .fa-angle-down {
+  font-size: 30px;
+  position: absolute;
+  top: 300px;
+  left: 49%;
+}
+.nav .fa-bars {
+  font-size: 30px;
+  display: none;
+}
+.logo {
+  width: 90px;
+  height: 90px;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin-top: 5vh;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  background-color: white;
+  z-index: 999;
+  position: relative;
+}
+
+.projects h1 {
+  font-size: 80px;
+  text-align: center;
+  margin-top: 60px;
+}
+.projectPics {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.projectPics .card {
+  position: relative;
+  background-color: black;
+  width: 400px;
+  height: 300px;
+}
+
+.projectPics .card .overlay {
+  display: flex;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  opacity: 0;
+}
+.projectPics .card p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  font-size: 4vh;
+  z-index: 999;
+  user-select: none;
+}
+
+.card:hover .overlay {
+  opacity: 0.5;
+}
+
+.card:hover p {
+  opacity: 1;
+  cursor: pointer;
+}
+.blackWhite {
+  width: 100%;
+  height: 50vh;
+  background-image: url(./pics/photo-1514092135741-08b367214e27.jfif);
+  background-repeat: none;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 999;
+}
+.about {
+  text-align: center;
+  z-index: 999;
+  background-color: white;
+  height: 50vh;
+  padding-top: 90px;
+}
+.about h1 {
+  font-size: 75px;
+}
+.about p {
+  font-size: 2.5vh;
+  padding-top: 40px;
+}
+.aboutPic {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./pics/metro-de-new-york-times-square-new-york-usa-jyg0ah.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+footer {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+}
+footer h1 {
+  font-size: 75px;
+  padding-top: 90px;
+}
+.contact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+.contact label {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+.contact input {
+  width: 45vw;
+  height: 38px;
+  margin-top: 8px;
+  outline: none;
+}
+.firstLast {
+  display: flex;
+  gap: 5vw;
+}
+
+.firstLast input {
+  width: 20vw;
+}
+.contact button {
+  margin-top: 50px;
+  width: 150px;
+  height: 40px;
+  margin-left: 550px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.sideInfo {
+  display: flex;
+  gap: 50px;
+  margin-left: 410px;
+  margin-top: -20px;
+}
+.sideInfo a {
+  text-decoration: none;
+  color: black;
+}
+.sideInfo .icons {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+}
+.closeIcon {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    height: auto;
+  }
+  .projectPics {
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .blackWhite {
+    padding-top: 50px;
+  }
+
+  .hamburger {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+  }
+
+  .nav ul {
+    margin-left: 0;
+    margin-top: 0;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menu {
+    position: fixed;
+    transform: translateX(150%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: white;
+    color: white;
+    list-style: none;
+  }
+  .showMenu {
+    transform: translateX(50%);
+  }
+
+  .nav ul li a {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: black;
+    text-decoration: none;
+  }
+
+  .menuItem:hover {
+    text-decoration: underline;
+  }
+
+  .closeIcon {
+    display: none;
+  }
+
+  .firstLast {
+    flex-direction: column;
+  }
+
+  .contact input {
+    width: 70vw;
+    height: 38px;
+    margin-top: 8px;
+    outline: none;
+  }
+  .firstLast {
+    display: flex;
+    gap: 0;
+  }
+
+  .firstLast input {
+    width: 70vw;
+  }
+
+  .sideInfo {
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact button{
+    margin: 0;
+    padding: 0;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  footer {
+    height: 100%;
+  }
+}
